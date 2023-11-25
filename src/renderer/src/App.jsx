@@ -1,8 +1,11 @@
 import Header from './components/Header'
-import { EditText, EditTextarea } from 'react-edit-text'
+import { EditText } from 'react-edit-text'
+import { useTranslation } from 'react-i18next'
+
 import imgage from './brand.png'
 import generatePDF, { Resolution, Margin } from 'react-to-pdf'
 import './styles.scss'
+import TextareaComponent from './components/TextareaComponent'
 
 const options = {
   // default is `save`
@@ -44,8 +47,22 @@ const options = {
 const getTargetElement = () => document.getElementById('content-id')
 
 function App() {
+  const { i18n } = useTranslation()
+
+  const handleCahngeLang = (lang) => {
+    i18n.changeLanguage(lang)
+  }
+
   return (
     <>
+      <div className="action-btn">
+        <button className="btn" onClick={() => handleCahngeLang('en')}>
+          English
+        </button>
+        <button className="btn" onClick={() => handleCahngeLang('hi')}>
+          Hindi
+        </button>
+      </div>
       <div className="app" id="content-id">
         <img src={imgage} alt="band" className="band" />
         <Header />
@@ -62,12 +79,7 @@ function App() {
             </div>
           </div>
           <div className="main_text_area">
-            <EditTextarea
-              name="textarea1"
-              rows={7}
-              defaultValue="Enter your main content here.."
-              style={{ width: '100%' }}
-            />
+            <TextareaComponent lang={i18n.language} />
           </div>
         </div>
       </div>

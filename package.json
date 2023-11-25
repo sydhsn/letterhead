@@ -21,7 +21,10 @@
     "@electron-toolkit/utils": "^2.0.0",
     "electron-updater": "^6.1.1",
     "electron-wix-msi": "^5.0.0",
+    "i18next": "^23.7.6",
     "react-edit-text": "^5.1.1",
+    "react-i18next": "^13.5.0",
+    "react-localization": "^1.0.19",
     "react-to-pdf": "^1.0.1",
     "sass": "^1.69.5"
   },

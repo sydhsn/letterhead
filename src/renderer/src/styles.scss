@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: Kruti Dev;
+    src: url('./fonts/KRDEV010.TTF') format("truetype");
+}
+
 @media (prefers-reduced-motion: no-preference) {
     :root {
         scroll-behavior: smooth;
@@ -32,6 +37,7 @@ p {
     font-size: 12px;
     font-weight: 800;
 }
+
 .print-button {
     position: relative;
     top: -52px;
@@ -44,6 +50,18 @@ p {
     cursor: pointer;
     border: none;
 }
+.action-btn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    .btn {
+        width: 60px;
+    }
+}
+
 .app {
     width: 21cm;
     min-height: 29.7cm;

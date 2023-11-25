@@ -20,7 +20,7 @@ const msiCreator = new MSICreator({
   // Configure metadata
   description: 'This is a demo application',
   exe: 'letter-head',
-  name: 'This is letter head application',
+  name: 'letter-head',
   manufacturer: 'saiyadhusain',
   version: '1.0.0',
 
